@@ -71,4 +71,77 @@ console.log(controversialPizzaToppings)
   console.log(myCar)
 
   // Exercise 6:
-  
+
+// Create an object named userProfile. 
+// Define a variable named propertyName and assign a string to it (like a username, age, or email). 
+// Use propertyName as a dynamic key in userProfile, assigning a relevant value.
+
+// Your code here
+
+const propertyName = 'name'
+
+const userProfile = {
+ [propertyName]: "Jesse",
+}
+
+console.log(userProfile)
+
+//Exercise: 8
+
+// Create a function that takes two parameters, `noun` and `adjective`, both with the following respective default values:
+
+// 1. `cat`
+
+// 2. `white`
+
+// The function should log a sentence 'The cat is white.' by default. The function should substitute the appropriate parameters when supplied arguments.
+
+// Your code here
+
+const sentence = (noun, adjective) => {
+    return "The " + noun + " is " + adjective
+}
+
+
+console.log(sentence("dog", "fat"))
+
+
+//Exercise: 9
+
+// Convert the following `if...else` statement in to a ternary:
+
+let pizza = 'tasty';
+
+// if (pizza === 'tasty') {
+//   console.log('yum');
+// } else {
+//   console.log('yuck');
+// }
+
+// Your code here
+let food = pizza === 'tasty' ? 'yum' : 'yuck'
+console.log(food)
+
+// Exercise 10
+
+const localLangConfig = null;
+const LANG = localLangConfig || 'en'
+
+console.log('Language setting:', LANG);
+
+const userSavedTheme = null; 
+
+const USER_THEME = userSavedTheme || 'light'
+
+console.log('User theme setting:', USER_THEME);
+
+
+// Now check for `cat.age` on `adventurer`. See how it errors out? Use optional chaining in a console.log that it returns undefined instead.
+
+const adventurer = {
+  name: 'Alice',
+};
+
+let cat = adventurer.cat?.age
+
+console.log(cat);
